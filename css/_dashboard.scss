@@ -1,0 +1,185 @@
+@media only screen and (min-width: 1440px) {
+	body {
+		width: 100vw;
+		height: 100vh;
+		background: linear-gradient(to top, ($Softblue), ($Softviolet));
+		@include flex(center, center, column);
+		
+	}
+	.wrapper {
+		background: url(../images/bg-pattern-desktop.svg) no-repeat -43vh -10vh
+				fixed,
+			white;
+		border-radius: 25px;
+		height: 75%;
+		width: 70%;
+		margin: 0 auto;
+		@include flex(end, center, row);
+		box-shadow: 0px 40.7px 32.5px rgba(0, 0, 0, 0.101),
+			0px 53px 37px rgba(0, 0, 0, 0.1);
+		
+		
+		.logo {
+			width: 70%;
+			height: 75%;
+			overflow: hidden;
+			@include flex (start, center, row);
+			.box {
+				position: absolute;
+				z-index: 1;
+				top: 45%;
+				left: 8%;
+				
+			}
+			.woman {
+				position: relative;
+				top: -3%;
+				left: -17%;
+				
+			}
+		}
+	}
+	.content {
+		position: relative;
+		width: 70%;
+		height: auto;
+		margin-right: 5%;
+		h1 {
+			margin-top: 7%;
+			font-size: 38px;
+		}
+
+		div {
+			margin: 5% 10% 10% 0;
+			padding-bottom: 3%;
+			border-bottom: 1px solid $Lightgrayishblue;
+			p {
+				font-size: 12px;
+				font-weight: 700;
+				display: none;
+				margin-top: 4px;
+				transition: all 0.5s ease-in;
+				color: $Darkgrayishblue;
+			}
+			h3 {
+				// color: $Darkgrayishblue;
+
+				button {
+					float: right;
+					background: transparent;
+					border: hidden;
+					transition: all 0.5s;
+				}
+			}
+			h3:hover {
+				color: $Softred;
+			}
+		}
+	}
+
+	.attribution {
+		font-size: 11px;
+		text-align: center;
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		a {
+			color: hsl(228, 45%, 44%);
+		}
+	}
+}
+@media only screen and (max-width: 700px) {
+	body {
+		width: 100vw;
+		height: 100vh;
+		background: linear-gradient(to top, ($Softblue), ($Softviolet));
+		@include flex(center, center, column);
+		position: relative;
+	}
+	.wrapper {
+		background: url(../images/bg-pattern-mobile.svg) no-repeat 50px 10px, white;
+		border-radius: 25px;
+		height: 70%;
+		width: 90%;
+		margin: 0 auto;
+		@include flex(end, center, row);
+		overflow: scroll;
+		box-shadow:
+  0px 40.7px 32.5px rgba(0, 0, 0, 0.101),
+  0px 53px 37px rgba(0, 0, 0, 0.1)
+;
+
+		.logo {
+			.box {
+				position: absolute;
+				z-index: 1;
+				top: 10%;
+				left: 12%;
+				width: 30%;
+			}
+			.woman {
+				position: absolute;
+				top: 2%;
+				left: 15%;
+				width: 70%;
+			}
+		}
+	}
+	.content {
+		width: 100%;
+		height: auto;
+		
+		h1 {
+			text-align: center;
+			font-size: 38px;
+			padding-top: 40%;
+			z-index: 2;
+		}
+
+		div {
+			margin: 10% 5%;
+			padding-bottom: 5%;
+			border-bottom: 1px solid $Lightgrayishblue;
+
+			p {
+				font-size: 12px;
+				font-weight: 400;
+				display: none;
+				margin-top: 4px;
+				transition: all 0.5s ease-in;
+				color: $Darkgrayishblue;
+			}
+			h3 {
+				font-weight: 700;
+				// color: $Darkgrayishblue;
+				button {
+					float: right;
+					background: transparent;
+					border: hidden;
+					transition: all 0.5s;
+				}
+			}
+		}
+	}
+	.attribution {
+		font-size: 11px;
+		text-align: center;
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		a {
+			color: hsl(228, 45%, 44%);
+		}
+	}
+}
+
+.rotate {
+	transform: rotate(180deg);
+}
+
+.colorLight {
+	color: hsl(240, 6%, 50%);
+}
+.colorDark {
+	color: hsl(238, 29%, 16%);
+}
